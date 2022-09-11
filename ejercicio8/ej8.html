@@ -1,0 +1,79 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>.: Actividad 2 | Ejercicio 8 - 10_A_ES_2021-22_Aplicaciones web :.</title>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+	<link href="style.css" rel="stylesheet" type="text/css" />  
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Votaciones</h1>
+      <!-- *** -->
+      <div class="container">
+		  <table align="center">
+			<tr>
+				<td align="center"><img src="img/socialistas.png"></td>
+				<td align="center"><img src="img/liberales.png"></td>
+				<td align="center"><img src="img/animalistas.png"></td>
+				<td align="center"><img src="img/centristas.png"></td>
+				<td align="center"><img src="img/ecologistas.png"></td>
+		  	</tr>
+		  	<tr>
+				<td><button type="button" onclick="vote(0)">Socialistas</button></td>
+				<td><button type="button" onclick="vote(1)">Liberales</button></td>
+				<td><button type="button" onclick="vote(2)">Animalistas</button></td>
+				<td><button type="button" onclick="vote(3)">Centristas</button></td>
+				<td><button type="button" onclick="vote(4)">Ecologistas</button></td>  
+		 	</tr>
+		</table>
+		</br>
+		<button type="button" onclick="reset()">Reset</button>
+	  	</br></br>
+      </div>
+      <!-- *** -->
+	  <center>
+      <div class="chart-container">
+		<canvas id="myChart"></canvas>
+	  </div>
+	  </center>
+	  <script>
+		  const data = {
+  			labels: ['Socialistas','Liberales','Animalistas','Centristas','Ecologistas',],
+  			datasets: [{
+    		label: 'My First Dataset',
+    		data : [0,0,0,0,0],
+    		backgroundColor: ['rgb(255, 0, 0)','rgb(0, 100, 210)','rgb(119, 9, 196)','rgb(255, 128, 0)','rgb(2, 108, 36)'],
+    		hoverOffset: 1
+  			}]
+		};
+		const config = {
+  			type: 'pie',
+  			data: data,
+  			backgroundColor: 'rgb(240, 238, 229)',
+		};
+		function vote(a){
+  			console.log(myChart.data.datasets[0].data[a]) 
+  			console.log(a) 
+  			myChart.data.datasets[0].data[a]= ((myChart.data.datasets[0].data[a])+1);
+  			myChart.update();
+		}
+		function reset(){
+  			myChart.data.datasets[0].data[0]=0;
+  			myChart.data.datasets[0].data[1]=0;
+  			myChart.data.datasets[0].data[2]=0;
+  			myChart.data.datasets[0].data[3]=0;
+  			myChart.data.datasets[0].data[4]=0;
+  			myChart.update()
+		}
+	</script>
+  	<script>
+    	const myChart = new Chart(document.getElementById('myChart'),config);
+  	</script>
+  </div>
+	<div align="center">
+		</br></br><a class="btn btn-primary" href="../index.html" role="button" style="border-color: #f8a81b;  border-radius: 50%; background-color: rgba(1,28,71,0.3); color: #f8a81b;"> Inicio </a>
+  	</div>
+  </body>
+</html>

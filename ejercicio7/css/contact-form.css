@@ -1,0 +1,108 @@
+/* Importación de fuentes de google fonts */ 
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans);
+
+body{
+	background-color: #011c47; 
+	font-weight: bolder; 
+	text-align: center; 
+	color: #f8a81b; 
+	position:relative;
+}
+
+.contact_form{   
+  height: auto;
+  margin: 10px 10px;
+  border-radius: 30px;  
+  padding-top: 30px;
+  padding-bottom: 20px;  
+  background-color:rgba(1,28,71,0.7); 
+  padding-left: 10px; 
+}
+
+input{
+  background-color: rgba(1,28,71,0.4); 
+  width: 200px; 
+  height: 40px; 
+  border-radius: 5px;  
+  border-style: solid; 
+  border-width: 2px; 
+  border-color: #f8a81b; 
+  margin-top: 10px;  
+  padding-left: 10px;
+  margin-bottom: 20px;
+  color: #f8a81b;
+}
+
+textarea{
+  background-color: rgba(1,28,71,0.4); 
+  width: 200px; 
+  height: 150px; 
+  border-radius: 5px;  
+  border-style: solid; 
+  border-width: 2px; 
+  border-color: #f8a81b; 
+  margin-top: 10px;  
+  padding-left: 10px;
+  margin-bottom: 20px; 
+  padding-top: 15px; 
+  color: #f8a81b;
+}
+
+label{
+  display: block; 
+  float: center;  
+}
+
+button{
+  height: auto; 
+  padding-left: 5px;
+  padding-right: 5px;   
+  margin-bottom: 10px; 
+  margin-top: 10px;   
+  text-transform: uppercase;
+  background-color: #f8a81b; 
+  border-color: #f8a81b; 
+  border-style: solid; 
+  border-radius: 10px;  
+  width: auto;   
+  cursor: pointer;
+}
+
+button p{
+  color: #011c47; 
+}
+
+span{
+  color: #f8a81b; 
+}
+
+.aviso{
+  font-size: 13px;  
+  color: #f8a81b;  
+}
+
+h1{
+  font-size: 39px;  
+  text-align: letf; 
+  padding-bottom: 20px; 
+  color: #f8a81b;
+}
+
+h3{
+  font-size: 16px; 
+  padding-bottom: 30px;
+  color: #f8a81b;   
+}
+
+p{
+  font-size: 14px; 
+  color: #f8a81b; 
+}
+
+::-webkit-input-placeholder {
+ color: rgba(1,28,71,0.4);
+}
+
+::-webkit-textarea-placeholder {
+ color: rgba(1,28,71,0.4);
+}
